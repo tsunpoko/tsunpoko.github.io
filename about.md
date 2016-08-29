@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+ここはWrite Up置き場.
 
-### More Information
+それ以外は, <a href="http://tsunpoko.hatenablog.com/">はてなブログ</a>に置いてる.
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+<a href="http://no-operation.xyz">home page</a>
