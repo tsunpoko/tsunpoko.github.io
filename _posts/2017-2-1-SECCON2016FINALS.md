@@ -13,7 +13,7 @@ pwn100しか解けなかったけどwriteup.
 2回の入力がある.
 1回目の入力でBOFがあり,
 
-```
+{% highlight asm %}
  80485ed:	e8 40 00 00 00       	call   8048632 <getaline>
  80485f2:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
  80485f5:	89 44 24 0c          	mov    DWORD PTR [esp+0xc],eax
@@ -23,7 +23,7 @@ pwn100しか解けなかったけどwriteup.
  8048607:	08 
  8048608:	c7 04 24 01 00 00 00 	mov    DWORD PTR [esp],0x1
  804860f:	e8 bc fd ff ff       	call   80483d0 <dprintf@plt>
-```
+{% endhighlight %}
 
 ```
 gdb-peda$ x/40xw 0xffffd3cc
