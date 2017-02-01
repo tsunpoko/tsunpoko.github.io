@@ -25,7 +25,7 @@ pwn100しか解けなかったけどwriteup.
  804860f:	e8 bc fd ff ff       	call   80483d0 <dprintf@plt>
 {% endhighlight %}
 
-```
+{% highlight shell %}
 gdb-peda$ x/40xw 0xffffd3cc
 0xffffd3cc:	0x41414141	0x00000000	0x00000000	0xffffd498
 0xffffd3dc:	0xf7e41b74	0xf7fb93cc	0xffffd3fc	0x00000000
@@ -33,12 +33,13 @@ gdb-peda$ x/40xw 0xffffd3cc
 0xffffd3fc:	0x0622705a	0xffffd498	0xf7ff04c0	0xf7fb9000
 0xffffd40c:	0xdf866000	0x00000000	0xf7e42016	0xffffd498
 0xffffd41c:	0x0804859a	0x08048745	0xffffd44c	0xffffd44
-```
+{% endhighlight %}
 
-```
+
+{% highlight c %}
 dprintf("Hi, %s\n%s\n>>", 0xffffd3cc, 0x08048745);
                          [user input]
-```
+{% endhighlight %}
 
 getaline()直後に*(ebp+0x8)をeaxに入れて, それをdprintfの第3引数に指定しているのでここで任意のアドレスが読めます.
 
