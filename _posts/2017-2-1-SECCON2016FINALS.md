@@ -6,6 +6,8 @@ title: SECCON 2016 FINALS writeup
 elfでSECCON決勝に参加していました.
 結果は23/24でしんどかったです.
 
+サーバー参のwriteup欲しいけど見つからないので誰か教えてください...
+
 pwn100しか解けなかったけどwriteup.
 
 ![](https://tsunpoko.github.io/images/seccon2016finals_enquete.png)
@@ -169,3 +171,7 @@ info('stage3')
 
 c.shell()
 {% endhighlight %}
+
+* * *
+
+完全に知能不足を感じ正直悔しい.
