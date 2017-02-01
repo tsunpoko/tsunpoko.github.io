@@ -13,7 +13,7 @@ pwn100しか解けなかったけどwriteup.
 2回の入力がある.
 1回目の入力でBOFがあり,
 
-{% highlight asm %}
+{% highlight nasm %}
  80485ed:	e8 40 00 00 00       	call   8048632 <getaline>
  80485f2:	8b 45 08             	mov    eax,DWORD PTR [ebp+0x8]
  80485f5:	89 44 24 0c          	mov    DWORD PTR [esp+0xc],eax
@@ -47,11 +47,12 @@ getaline()直後に*(ebp+0x8)をeaxに入れて, それをdprintfの第3引数�
 
 0xffffd420 - 0xffffd3cc = 84
 
-```
+{% highlight nasm %}
  8048614:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
  8048617:	89 04 24             	mov    DWORD PTR [esp],eax
  804861a:	e8 13 00 00 00       	call   8048632 <getaline>
-```
+{% endhighlight  %}
+
 *(ebp+0xc)を引数としてgetaline()を呼んでいるので, ここを任意のアドレスにすればそこに書き込みが出来そうです.
 
 攻撃の流れとして, 3ステージに分かれていて
