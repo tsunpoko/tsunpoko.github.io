@@ -72,7 +72,7 @@ __stack_chk_fail()に引っかかるので, rop発動で終了です.
 以下exploit
 
 <pre>
-  <code class="ruby">
+  <code class="python">
 from No___Op import *
 
 if len(sys.argv) > 1:
