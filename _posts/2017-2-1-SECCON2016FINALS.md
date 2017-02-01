@@ -39,3 +39,10 @@ gdb-peda$ x/40xw 0xffffd3cc
 dprintf("Hi, %s\n%s\n>>", 0xffffd3cc, 0x08048745);
 						 [user input]
 ```
+
+
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
