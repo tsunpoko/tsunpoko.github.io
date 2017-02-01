@@ -42,7 +42,9 @@ dprintf("Hi, %s\n%s\n>>", 0xffffd3cc, 0x08048745);
 
 getaline()直後に*(ebp+0x8)をeaxに入れて, それをdprintfの第3引数に指定しているのでここで任意のアドレスが読めます.
 
-この場合の*(ebp+0x8)は0xffffd420です.
+この場合*(ebp+0x8)は0xffffd420 -> 0x08048745です.
+
+0xffffd420 - 0xffffd3cc = 84
 
 ```
  8048614:	8b 45 0c             	mov    eax,DWORD PTR [ebp+0xc]
@@ -71,8 +73,7 @@ __stack_chk_fail()に引っかかるので, rop発動で終了です.
 
 以下exploit
 
-<pre>
-  <code class="python">
+{% highlight python %}
 from No___Op import *
 
 if len(sys.argv) > 1:
@@ -165,5 +166,4 @@ c.sendall(pay2)
 info('stage3')
 
 c.shell()
-  </code>
-</pre>
+{% endhighlight %}
