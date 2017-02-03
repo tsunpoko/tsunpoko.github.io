@@ -8,7 +8,7 @@ elfでSECCON決勝に参加していました.
 
 サーバー参のwriteup欲しいけど見つからないので誰か教えてください...
 
-pwn100しか解けなかったけどwriteup.
+enquete (pwn100) しか解けなかったけどwriteup.
 
 ![](https://tsunpoko.github.io/images/seccon2016finals_enquete.png)
 
