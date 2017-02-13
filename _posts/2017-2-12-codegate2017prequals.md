@@ -30,6 +30,24 @@ FLAG{Nav3r_L3t_y0ur_L3ft_h4nd_kn0w_wh4t_y0ur_r1ghT_h4nd5_H4ck1ng}
 
 ## Babypwn
 
+BOFがあるがcanaryのチェックに引っかかってしまい__stack_chk_fail()が呼ばれる.
+
+しかしstack上にcanaryが積まれていたのでリークする.
+
+canaryの最下位バイトが` \x00 `になる & send()はヌル文字が出力されるまでsendする(多分)ので
+ヌル文字を潰して, `\x00` + 3byteがcanaryとなる.
+
+あとはsystem@pltを使って"/bin/sh"を起動したいがfork型なのでfdを標準入出力に向けないといけない.
+`'/bin/sh <&4 >&4 2>&4;'`
+
+これはstackのアドレスもリークしてstackに積んだ
+
+それと詰まった所があとひとつあって, systep@pltを配置するまえに "/bin/sh"を配置してしまい
+system@pltが呼び出されているにも関わらずシェルが起動しなくつらい状態になっていた.
+
+system@pltを配置したあとに文字列を置いてそこを指定すると上手く動いた.
+
+
 {% highlight python %}
 
 from No___Op import *
